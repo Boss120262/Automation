@@ -31,7 +31,7 @@ def summarize_with_gemini(news_text):
         )
 
         response = client.models.generate_content(
-            model="gemini-1.5-flash", # แนะนำให้ใช้รุ่นนี้เพื่อความเสถียรค่ะ
+            model="gemini-flash-latest", # แนะนำให้ใช้รุ่นนี้เพื่อความเสถียรค่ะ
             contents=f"{system_instruction}\n\nนี่คือข่าวที่คุณต้องสรุป:\n{news_text}"
         )
         
@@ -85,3 +85,4 @@ if __name__ == "__main__":
     track_ai_news()
 
     print("--- [ Finish ] ---")
+
